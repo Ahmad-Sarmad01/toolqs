@@ -1,5 +1,32 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/getPosts";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog | ToolQS – Productivity, Learning & Online Tools",
+  description:
+    "Read insights, guides, and tips on productivity, study hacks, and the best online tools from ToolQS.",
+  keywords: [
+    "blog",
+    "online tools blog",
+    "productivity tips",
+    "learning hacks",
+    "free tools guides"
+  ],
+  openGraph: {
+    title: "Blog | ToolQS – Productivity, Learning & Online Tools",
+    description:
+      "Guides and insights on productivity, study, and online tools.",
+    url: "https://toolqs.com/blog",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | ToolQS – Productivity, Learning & Online Tools",
+    description:
+      "Tips and guides on productivity, learning, and the best online tools.",
+  },
+};
 
 export default function BlogPage() {
   const posts = getAllPosts();
@@ -56,6 +83,15 @@ export default function BlogPage() {
           </article>
         ))}
       </div>
+      <div className="text-center mt-12">
+  <p className="text-gray-600">
+    Looking for our free tools?{" "}
+    <Link href="/tools" className="text-blue-600 underline">
+      Explore Tools
+    </Link>
+  </p>
+</div>
+
     </main>
   );
 }

@@ -8,21 +8,22 @@ import RelatedPosts from "@/components/RelatedPosts";
 
 const postsDir = path.join(process.cwd(), "src/content/blog");
 
-function getPost(slug: string) {
+interface PostData {
+  title: string;
+  date?: string;
+  description?: string;
+  keywords?: string[];
+}
+
+function getPost(slug: string): { data: PostData } | null {
   const filePath = path.join(postsDir, `${slug}.mdx`);
+
   if (!fs.existsSync(filePath)) return null;
 
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const { data } = matter(fileContent);
 
-  return { data } as {
-    data: {
-      title: string;
-      date?: string;
-      description?: string;
-      keywords?: string[];
-    };
-  };
+  return { data } as { data: PostData };
 }
 
 export async function generateMetadata({
@@ -31,6 +32,7 @@ export async function generateMetadata({
   params: { slug: string };
 }): Promise<Metadata> {
   const post = getPost(params.slug);
+
   if (!post) {
     return {
       title: "Post not found",
@@ -38,7 +40,7 @@ export async function generateMetadata({
     };
   }
 
-  const siteUrl = "https://yourdomain.com";
+  const siteUrl = "https://toolqs.com"; 
   const url = `${siteUrl}/blog/${params.slug}`;
 
   return {
@@ -66,6 +68,7 @@ interface BlogPageProps {
 
 export default function BlogPostPage({ params }: BlogPageProps) {
   const post = getPost(params.slug);
+
   if (!post) return notFound();
 
   return (
@@ -86,11 +89,12 @@ export default function BlogPostPage({ params }: BlogPageProps) {
         <MDXClient slug={params.slug} />
       </article>
 
-      {post.data.keywords && post.data.keywords.length > 0 && (
+      {post.data.keywords?.length ? (
         <div className="mt-6 text-sm text-gray-500">
           <strong>Keywords:</strong> {post.data.keywords.join(", ")}
         </div>
-      )}
+      ) : null}
+
       <RelatedPosts currentSlug={params.slug} />
     </main>
   );

@@ -23,10 +23,14 @@ export default function Navbar() {
                 Tools ▾
               </button>
             </Link>
-              <div className="absolute hidden group-hover:grid bg-white shadow-lg rounded-md mt-1 -left-50 w-130 p-3 grid-cols-3 gap-2 z-50">
+              <div className="absolute hidden group-hover:grid bg-white shadow-lg rounded-md mt-1 -left-105 w-180 p-3 grid-cols-3 gap-2 z-50">
                 <Link href="/tools/gpa-calculator" className="px-3 py-2 hover:bg-gray-100 rounded-md">GPA Calculator</Link>
                 <Link href="/tools/qr-code" className="px-5 py-2 hover:bg-gray-100 rounded-md">QR Generator</Link>
-                <Link href="/tools/pdf-tools" className="px-3 py-2 hover:bg-gray-100 rounded-md">PDF Tools</Link>
+                <Link href="/tools/pdf-merger" className="px-3 py-2 hover:bg-gray-100 rounded-md">PDF Merger</Link>
+                <Link href="/tools/pdf-splitter" className="px-3 py-2 hover:bg-gray-100 rounded-md">PDF Splitter</Link>
+                <Link href="/tools/word-to-pdf" className="px-3 py-2 hover:bg-gray-100 rounded-md">Word to PDF Converter</Link>
+                <Link href="/tools/pdf-to-word" className="px-3 py-2 hover:bg-gray-100 rounded-md">PDF to Word Converter</Link>
+                <Link href="/tools/image-to-pdf" className="px-3 py-2 hover:bg-gray-100 rounded-md">Image to PDF Converter</Link>
                 <Link href="/tools/unit-converter" className="px-3 py-2 hover:bg-gray-100 rounded-md">Unit Converter</Link>
                 <Link href="/tools/word-counter" className="px-3 py-2 hover:bg-gray-100 rounded-md">Word Counter</Link>
                 <Link href="/tools/resume-builder" className="px-3 py-2 hover:bg-gray-100 rounded-md">Resume Builder</Link>
@@ -34,7 +38,6 @@ export default function Navbar() {
                 <Link href="/tools/loan-calculator" className="px-3 py-2 hover:bg-gray-100 rounded-md">Loan Calculator</Link>
               </div>
             </div>
-
             <Link href="/blog">Blog</Link>
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>

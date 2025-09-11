@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import { Metadata } from "next";
+import { Calculator, QrCode, FileText, Wallet, FileUser, Type, Ruler, Image, Gift, Zap, GraduationCap, Shield, Globe, RefreshCw, FilePlus, Scissors, FileInput } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "ToolQS – Free Online Tools for Work & Study",
@@ -64,7 +65,7 @@ export default function HomePage() {
           }}
         />
       </Head>
-      {/* Hero Section */}
+
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-28">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
@@ -90,26 +91,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Popular Tools */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Popular Tools
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <ToolCard name="GPA Calculator" href="/tools/gpa-calculator" />
-            <ToolCard name="QR Generator" href="/tools/qr-code" />
-            <ToolCard name="PDF Tools" href="/tools/pdf-tools" />
-            <ToolCard name="Loan Calculator" href="/tools/loan-calculator" />
-            <ToolCard name="Resume Builder" href="/tools/resume-builder" />
-            <ToolCard name="Word Counter" href="/tools/word-counter" />
-            <ToolCard name="Unit Converter" href="/tools/unit-converter" />
-            <ToolCard name="Image Compressor" href="/tools/image-compress" />
+            <ToolCard name="GPA Calculator" href="/tools/gpa-calculator" icon={Calculator} description="Easily calculate your GPA." />
+            <ToolCard name="QR Generator" href="/tools/qr-code" icon={QrCode} description="Generate QR codes in seconds." />
+            <ToolCard name="PDF Merger" href="/tools/pdf-merger" icon={FilePlus} description="Combine multiple PDF files into one." />
+            <ToolCard name="PDF Splitter" href="/tools/pdf-splitter" icon={Scissors} description="Split PDFs into individual pages or sections." />
+            <ToolCard name="Word to PDF Converter" href="/tools/word-to-pdf" icon={FileText} description="Convert Word documents into PDFs easily." />
+            <ToolCard name="PDF to Word Converter" href="/tools/pdf-to-word" icon={FileInput} description="Extract text and content by converting PDFs into Word." />
+            <ToolCard name="Image to PDF Converter" href="/tools/image-to-pdf" icon={Image} description="Turn images (JPG, PNG, etc.) into a single PDF."/>
+            <ToolCard name="Loan Calculator" href="/tools/loan-calculator" icon={Wallet} description="Plan your loan repayments." />
+            <ToolCard name="Resume Builder" href="/tools/resume-builder" icon={FileUser} description="Create professional resumes." />
+            <ToolCard name="Word Counter" href="/tools/word-counter" icon={Type} description="Count words and characters." />
+            <ToolCard name="Unit Converter" href="/tools/unit-converter" icon={Ruler} description="Convert units instantly." />
+            <ToolCard name="Image Compressor" href="/tools/image-compress" icon={Image} description="Reduce image file size." />
           </div>
         </div>
       </section>
 
-      {/* Why Choose ToolQS */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose ToolQS?</h2>
@@ -118,58 +121,92 @@ export default function HomePage() {
             need reliable online tools — fast, free, and accessible anywhere.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition">
+            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <Gift className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="font-semibold text-xl mb-3 text-blue-700">Free Forever</h3>
-              <p className="text-gray-700">
-                No hidden charges. All tools are 100% free to use.
-              </p>
+              <p className="text-gray-700">No hidden charges. All tools are 100% free to use.</p>
             </div>
 
-            {/* Card 2 */}
-            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition">
+            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <Zap className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="font-semibold text-xl mb-3 text-blue-700">Fast & Simple</h3>
-              <p className="text-gray-700">
-                Get your work done instantly with an easy-to-use interface.
-              </p>
+              <p className="text-gray-700">Get your work done instantly with an easy-to-use interface.</p>
             </div>
 
-            {/* Card 3 */}
-            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition">
+            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <GraduationCap className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="font-semibold text-xl mb-3 text-blue-700">Student & Business Friendly</h3>
-              <p className="text-gray-700">
-                From GPA to PDFs, we’ve got solutions for study and work life.
-              </p>
+              <p className="text-gray-700">From GPA to PDFs, we’ve got solutions for study and work life.</p>
             </div>
 
-            {/* Card 4 */}
-            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition">
+            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <Shield className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="font-semibold text-xl mb-3 text-blue-700">Secure & Private</h3>
-              <p className="text-gray-700">
-                Your data stays private. We don’t store personal inputs or share them.
-              </p>
+              <p className="text-gray-700">Your data stays private. We don’t store personal inputs or share them.</p>
             </div>
 
-            {/* Card 5 */}
-            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition">
+            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <Globe className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="font-semibold text-xl mb-3 text-blue-700">Accessible Anywhere</h3>
-              <p className="text-gray-700">
-                Use ToolQS on any device—desktop, tablet, or mobile—without installation.
-              </p>
+              <p className="text-gray-700">Use ToolQS on any device—desktop, tablet, or mobile—without installation.</p>
             </div>
 
-            {/* Card 6 */}
-            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition">
+            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <RefreshCw className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="font-semibold text-xl mb-3 text-blue-700">Regularly Updated</h3>
-              <p className="text-gray-700">
-                We continuously improve our tools and add new ones to keep up with your needs.
-              </p>
+              <p className="text-gray-700">We continuously improve our tools and add new ones to keep up with your needs.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Call-to-Action */}
+  {/* <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose ToolQS?</h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            ToolQS is designed for students, professionals, and businesses who
+            need reliable online tools — fast, free, and accessible anywhere.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-6 bg-green-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <Gift className="w-10 h-10 text-green-600 mb-4" />
+              <h3 className="font-semibold text-xl mb-3 text-green-700">Free Forever</h3>
+              <p className="text-gray-700">No hidden charges. All tools are 100% free to use.</p>
+            </div>
+
+            <div className="p-6 bg-yellow-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <Zap className="w-10 h-10 text-yellow-600 mb-4" />
+              <h3 className="font-semibold text-xl mb-3 text-yellow-700">Fast & Simple</h3>
+              <p className="text-gray-700">Get your work done instantly with an easy-to-use interface.</p>
+            </div>
+
+            <div className="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <GraduationCap className="w-10 h-10 text-blue-600 mb-4" />
+              <h3 className="font-semibold text-xl mb-3 text-blue-700">Student & Business Friendly</h3>
+              <p className="text-gray-700">From GPA to PDFs, we’ve got solutions for study and work life.</p>
+            </div>
+
+            <div className="p-6 bg-red-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <Shield className="w-10 h-10 text-red-600 mb-4" />
+              <h3 className="font-semibold text-xl mb-3 text-red-700">Secure & Private</h3>
+              <p className="text-gray-700">Your data stays private. We don’t store personal inputs or share them.</p>
+            </div>
+
+            <div className="p-6 bg-purple-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <Globe className="w-10 h-10 text-purple-600 mb-4" />
+              <h3 className="font-semibold text-xl mb-3 text-purple-700">Accessible Anywhere</h3>
+              <p className="text-gray-700">Use ToolQS on any device—desktop, tablet, or mobile—without installation.</p>
+            </div>
+
+            <div className="p-6 bg-pink-50 rounded-xl shadow hover:shadow-lg transition flex flex-col items-center">
+              <RefreshCw className="w-10 h-10 text-pink-600 mb-4" />
+              <h3 className="font-semibold text-xl mb-3 text-pink-700">Regularly Updated</h3>
+              <p className="text-gray-700">We continuously improve our tools and add new ones to keep up with your needs.</p>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
       <section className="py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center relative overflow-hidden">
 
         <div className="relative z-10">
@@ -192,19 +229,20 @@ export default function HomePage() {
           </p>
         </div>
       </section>
-
     </div>
   );
 }
 
-function ToolCard({ name, href }: { name: string; href: string }) {
+function ToolCard({ name, href, icon: Icon, description }: { name: string; href: string; icon: React.ElementType; description: string; }) {
   return (
     <Link
       href={href}
       className="block bg-white p-6 rounded-xl shadow hover:shadow-xl transition transform hover:-translate-y-1 text-center"
       aria-label={`Open ${name}`}
     >
+      <Icon className="w-10 h-10 text-blue-600 mb-4" />
       <h3 className="font-semibold text-lg md:text-xl">{name}</h3>
+      <p className="text-sm text-gray-600 text-center">{description}</p>
     </Link>
   );
 }
