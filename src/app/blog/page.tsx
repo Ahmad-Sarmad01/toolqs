@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/getPosts";
 import { Metadata } from "next";
+import ExploreCTA from "@/components/ExploreCTA";
 
 export const metadata: Metadata = {
   title: "Blog | ToolQS – Productivity, Learning & Online Tools",
@@ -32,7 +33,7 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12">
+    <main className="max-w-8xl mx-auto pt-12">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
           Our Blog
@@ -43,7 +44,7 @@ export default function BlogPage() {
         </p>
       </div>
 
-      <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="px-6 md:px-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <article
             key={post.slug}
@@ -83,15 +84,9 @@ export default function BlogPage() {
           </article>
         ))}
       </div>
-      <div className="text-center mt-12">
-  <p className="text-gray-600">
-    Looking for our free tools?{" "}
-    <Link href="/tools" className="text-blue-600 underline">
-      Explore Tools
-    </Link>
-  </p>
-</div>
-
+      <div className="mt-10">
+      <ExploreCTA />
+      </div>
     </main>
   );
 }
