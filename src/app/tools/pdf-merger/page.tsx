@@ -384,25 +384,25 @@ export default function PDFMergerPage() {
               name="PDF Splitter"
               href="/tools/pdf-splitter"
               icon={Scissors}
-              description="Convert Word documents into PDFs easily."
+              description="Split PDFs as you require them and get what you want."
             />
             <ToolCard
               name="Word to PDF Converter"
               href="/tools/word-to-pdf"
               icon={FileText}
-              description="Extract text and content by converting PDFs into Word."
+              description="Extract text and content by converting Word into PDFs."
             />
             <ToolCard
               name="PDF to Word Converter"
               href="/tools/pdf-to-word"
               icon={FileInput}
-              description="Create professional resumes."
+              description="Extract text and content by converting PDFs into Word."
             />
             <ToolCard
               name="Image to PDF Converter"
               href="/tools/image-to-pdf"
               icon={Image}
-              description="Reduce image file size."
+              description="Convert image content into PDFs."
             />
           </div>
         </section>

@@ -33,7 +33,7 @@ export default function Navbar() {
               </button>
               <div className="absolute hidden group-hover:grid bg-white shadow-lg rounded-md mt-1 -left-105 w-180 p-3 grid-cols-3 gap-2 z-50">
                 <Link href="/tools/gpa-calculator" className="px-3 py-2 hover:bg-gray-100 rounded-md">GPA Calculator</Link>
-                <Link href="/tools/qr-code" className="px-5 py-2 hover:bg-gray-100 rounded-md">QR Generator</Link>
+                <Link href="/tools/qr-code" className="px-3 py-2 hover:bg-gray-100 rounded-md">QR Generator</Link>
                 <Link href="/tools/pdf-merger" className="px-3 py-2 hover:bg-gray-100 rounded-md">PDF Merger</Link>
                 <Link href="/tools/pdf-splitter" className="px-3 py-2 hover:bg-gray-100 rounded-md">PDF Splitter</Link>
                 <Link href="/tools/word-to-pdf" className="px-3 py-2 hover:bg-gray-100 rounded-md">Word to PDF</Link>
@@ -42,8 +42,10 @@ export default function Navbar() {
                 <Link href="/tools/unit-converter" className="px-3 py-2 hover:bg-gray-100 rounded-md">Unit Converter</Link>
                 <Link href="/tools/word-counter" className="px-3 py-2 hover:bg-gray-100 rounded-md">Word Counter</Link>
                 <Link href="/tools/resume-builder" className="px-3 py-2 hover:bg-gray-100 rounded-md">Resume Builder</Link>
-                <Link href="/tools/image-compressor" className="px-3 py-2 hover:bg-gray-100 rounded-md">Image Compressor</Link>
+                <Link href="/tools/image-compress" className="px-3 py-2 hover:bg-gray-100 rounded-md">Image Compressor</Link>
                 <Link href="/tools/loan-calculator" className="px-3 py-2 hover:bg-gray-100 rounded-md">Loan Calculator</Link>
+                <Link href="/tools/calorie-calculator" className="px-3 py-2 hover:bg-gray-100 rounded-md">Calorie Calculator</Link>
+                <Link href="/tools/grade-calculator" className="px-3 py-2 hover:bg-gray-100 rounded-md">Grade Calculator</Link>
               </div>
             </div>
             <Link href="/blog">Blog</Link>
@@ -74,8 +76,10 @@ export default function Navbar() {
           <Link href="/tools/unit-converter" onClick={handleLinkClick} className="block px-4 py-2">Unit Converter</Link>
           <Link href="/tools/word-counter" onClick={handleLinkClick} className="block px-4 py-2">Word Counter</Link>
           <Link href="/tools/resume-builder" onClick={handleLinkClick} className="block px-4 py-2">Resume Builder</Link>
-          <Link href="/tools/image-compressor" onClick={handleLinkClick} className="block px-4 py-2">Image Compressor</Link>
+          <Link href="/tools/image-compress" onClick={handleLinkClick} className="block px-4 py-2">Image Compressor</Link>
           <Link href="/tools/loan-calculator" onClick={handleLinkClick} className="block px-4 py-2">Loan Calculator</Link>
+          <Link href="/tools/calorie-calculator" onClick={handleLinkClick} className="block px-4 py-2">Calorie Calculator</Link>
+          <Link href="/tools/grade-calculator" onClick={handleLinkClick} className="block px-4 py-2">Grade Calculator</Link>
           <Link href="/blog" onClick={handleLinkClick} className="block px-4 py-2">Blog</Link>
           <Link href="/about" onClick={handleLinkClick} className="block px-4 py-2">About</Link>
           <Link href="/contact" onClick={handleLinkClick} className="block px-4 py-2">Contact</Link>
