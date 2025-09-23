@@ -39,9 +39,9 @@ export default function Navbar() {
                 <Link href="/tools/word-to-pdf" className="px-3 py-2 hover:bg-gray-100 rounded-md">Word to PDF</Link>
                 <Link href="/tools/pdf-to-word" className="px-3 py-2 hover:bg-gray-100 rounded-md">PDF to Word</Link>
                 <Link href="/tools/image-to-pdf" className="px-3 py-2 hover:bg-gray-100 rounded-md">Image to PDF</Link>
+                <Link href="/tools/image-background-remover" className="px-3 py-2 hover:bg-gray-100 rounded-md">Background Remover</Link>
                 <Link href="/tools/unit-converter" className="px-3 py-2 hover:bg-gray-100 rounded-md">Unit Converter</Link>
                 <Link href="/tools/word-counter" className="px-3 py-2 hover:bg-gray-100 rounded-md">Word Counter</Link>
-                <Link href="/tools/resume-builder" className="px-3 py-2 hover:bg-gray-100 rounded-md">Resume Builder</Link>
                 <Link href="/tools/image-compress" className="px-3 py-2 hover:bg-gray-100 rounded-md">Image Compressor</Link>
                 <Link href="/tools/loan-calculator" className="px-3 py-2 hover:bg-gray-100 rounded-md">Loan Calculator</Link>
                 <Link href="/tools/calorie-calculator" className="px-3 py-2 hover:bg-gray-100 rounded-md">Calorie Calculator</Link>
@@ -73,9 +73,9 @@ export default function Navbar() {
           <Link href="/tools/word-to-pdf" onClick={handleLinkClick} className="block px-4 py-2">Word to PDF</Link>
           <Link href="/tools/pdf-to-word" onClick={handleLinkClick} className="block px-4 py-2">PDF to Word</Link>
           <Link href="/tools/image-to-pdf" onClick={handleLinkClick} className="block px-4 py-2">Image to PDF</Link>
+          <Link href="/tools/image-background-remover" onClick={handleLinkClick} className="block px-4 py-2">Background Remover</Link>
           <Link href="/tools/unit-converter" onClick={handleLinkClick} className="block px-4 py-2">Unit Converter</Link>
           <Link href="/tools/word-counter" onClick={handleLinkClick} className="block px-4 py-2">Word Counter</Link>
-          <Link href="/tools/resume-builder" onClick={handleLinkClick} className="block px-4 py-2">Resume Builder</Link>
           <Link href="/tools/image-compress" onClick={handleLinkClick} className="block px-4 py-2">Image Compressor</Link>
           <Link href="/tools/loan-calculator" onClick={handleLinkClick} className="block px-4 py-2">Loan Calculator</Link>
           <Link href="/tools/calorie-calculator" onClick={handleLinkClick} className="block px-4 py-2">Calorie Calculator</Link>

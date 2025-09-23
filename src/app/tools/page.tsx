@@ -2,7 +2,7 @@
 
 import Head from "next/head";
 import Link from "next/link";
-import { Calculator, FileText, Briefcase, Layers, QrCode, Image, Scissors, FilePlus, Scale, WholeWord, GraduationCap, FileSpreadsheet, Activity } from "lucide-react";
+import { Calculator, FileText, Briefcase, Layers, QrCode, Image, ImageOff, Scissors, FilePlus, Scale, WholeWord, GraduationCap, FileSpreadsheet, Activity } from "lucide-react";
 import BlogCTA from "@/components/BlogCTA";
 
 const tools = [
@@ -106,10 +106,10 @@ const tools = [
   },
   {
     name: "Background Remover",
-    slug: "image-background-remover",
+    slug: "background-remover",
     description:
-      "Easily calculate grades from marks or percentages. Perfect for students and teachers to quickly assess performance.",
-    icon: GraduationCap, 
+      "Remove image backgrounds instantly with high accuracy. Fast, free, and SEO-optimized tool for designers, students, and professionals.",
+    icon: ImageOff,
   },
 ];
 
