@@ -10,10 +10,7 @@ export const metadata: Metadata = {
   description:
     "All-in-one free online tools: calculators, PDF utilities, QR generator, and more.",
   icons: {
-    icon: [
-      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
-      { url: "/favicon.ico", type: "image/x-icon" },
-    ],
+    icon: "/Favicon.png",
   },
 };
 
