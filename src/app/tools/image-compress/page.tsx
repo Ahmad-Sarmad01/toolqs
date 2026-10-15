@@ -535,7 +535,7 @@ async function fileToCompressedBlob(
 function loadImageFromFile(file: File): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const url = URL.createObjectURL(file);
-    const img = new Image();
+    const img = document.createElement("img");
     img.onload = () => {
       URL.revokeObjectURL(url);
       resolve(img);

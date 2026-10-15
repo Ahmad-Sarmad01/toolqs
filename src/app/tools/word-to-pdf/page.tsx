@@ -111,7 +111,15 @@ export default function WordToPDFPage() {
       await ensureFontsLoaded();
 
       const html2pdfModule = await import("html2pdf.js");
-      const html2pdf = html2pdfModule.default ? html2pdfModule.default : html2pdfModule;
+      const html2pdf = (html2pdfModule as unknown as {
+        default: () => {
+          set: (options: Record<string, unknown>) => {
+            from: (element: HTMLElement) => {
+              save: () => Promise<void>;
+            };
+          };
+        };
+      }).default;
 
       const element = previewRef.current;
 

@@ -29,9 +29,10 @@ function getPost(slug: string): { data: PostData } | null {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const post = getPost(params.slug);
+  const { slug } = await params;
+  const post = getPost(slug);
 
   if (!post) {
     return {
@@ -41,7 +42,7 @@ export async function generateMetadata({
   }
 
   const siteUrl = "https://toolqs.com"; 
-  const url = `${siteUrl}/blog/${params.slug}`;
+  const url = `${siteUrl}/blog/${slug}`;
 
   return {
     title: post.data.title,
@@ -63,11 +64,12 @@ export async function generateMetadata({
 }
 
 interface BlogPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function BlogPostPage({ params }: BlogPageProps) {
-  const post = getPost(params.slug);
+export default async function BlogPostPage({ params }: BlogPageProps) {
+  const { slug } = await params;
+  const post = getPost(slug);
 
   if (!post) return notFound();
 
@@ -86,7 +88,7 @@ export default function BlogPostPage({ params }: BlogPageProps) {
       )}
 
       <article className="prose prose-lg">
-        <MDXClient slug={params.slug} />
+        <MDXClient slug={slug} />
       </article>
 
       {post.data.keywords?.length ? (
@@ -95,7 +97,7 @@ export default function BlogPostPage({ params }: BlogPageProps) {
         </div>
       ) : null}
 
-      <RelatedPosts currentSlug={params.slug} />
+      <RelatedPosts currentSlug={slug} />
     </main>
   );
 }

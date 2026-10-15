@@ -253,7 +253,9 @@ export default function ImageToPdfPage() {
       }
 
       const pdfBytes = await pdfDoc.save();
-      const blob = new Blob([pdfBytes], { type: "application/pdf" });
+      const pdfBuffer = new ArrayBuffer(pdfBytes.length);
+      new Uint8Array(pdfBuffer).set(pdfBytes);
+      const blob = new Blob([pdfBuffer], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       setPdfUrlAndRevokePrevious(url);
     } catch (err) {

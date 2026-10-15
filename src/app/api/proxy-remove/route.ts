@@ -1,7 +1,7 @@
 // src/app/api/proxy-remove/route.ts
 import { NextRequest, NextResponse } from "next/server";
 
-export const runtime = "node"; // ensure Node runtime
+export const runtime = "nodejs"; // ensure Node runtime
 
 const MAX_UPLOAD = Number(process.env.MAX_UPLOAD_SIZE || "31457280"); // default 30MB
 const UPSTREAM = process.env.U2NET_SERVER_URL || "";

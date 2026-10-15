@@ -499,13 +499,19 @@ export default function GradeCalculatorPage() {
                       <div className="font-semibold mt-1">{requiredForTarget.remainingWeight}%</div>
 
                       <div className="text-sm text-gray-500 mt-2">Required average across remaining assessments</div>
-                      <div className="font-semibold mt-1">{requiredForTarget.requiredAverage.toFixed(2)}%</div>
+                      <div className="font-semibold mt-1">
+                        {requiredForTarget.requiredAverage !== undefined
+                          ? `${requiredForTarget.requiredAverage.toFixed(2)}%`
+                          : "Unable to calculate"}
+                      </div>
 
-                      {requiredForTarget.requiredAverage > 100 && (
+                      {requiredForTarget.requiredAverage !== undefined &&
+                        requiredForTarget.requiredAverage > 100 && (
                        <div className="mt-2 text-sm text-red-600">Note: Required average {'>'} 100% — target is not achievable with current data.</div>
                       )}
-                      {requiredForTarget.requiredAverage <= 0 && (
-                        <div className="mt-2 text-sm text-green-600">Congrats — you've already secured this target based on current scores (required average {'<='} 0%).</div>
+                      {requiredForTarget.requiredAverage !== undefined &&
+                        requiredForTarget.requiredAverage <= 0 && (
+                        <div className="mt-2 text-sm text-green-600">Congrats — youve already secured this target based on current scores (required average {'<='} 0%).</div>
                       )}
                     </div>
                   </>

@@ -39,7 +39,11 @@ export default function PDFSplitter() {
       copiedPages.forEach(p => newPdf.addPage(p));
 
       const bytes = await newPdf.save();
-      const blob = new Blob([bytes], { type: "application/pdf" });
+
+      const pdfBuffer = new ArrayBuffer(bytes.length);
+      new Uint8Array(pdfBuffer).set(bytes);
+
+      const blob = new Blob([pdfBuffer], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
 
       const link = document.createElement("a");

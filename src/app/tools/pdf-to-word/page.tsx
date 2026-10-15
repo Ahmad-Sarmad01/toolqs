@@ -149,7 +149,7 @@ export default function PdfToWordPage() {
     try {
       const arrayBuffer = await file.arrayBuffer();
 
-      const pdfjs = await import("pdfjs-dist/legacy/build/pdf");
+      const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
 
       try {
         if (pdfjs && (pdfjs as any).GlobalWorkerOptions) {
@@ -172,7 +172,7 @@ export default function PdfToWordPage() {
 
         if (isWorkerError) {
           console.warn("pdf.js worker error detected, retrying with disableWorker:true", firstErr);
-          const loadingTask = pdfjs.getDocument({ data: arrayBuffer, disableWorker: true });
+          const loadingTask = pdfjs.getDocument({ data: arrayBuffer });
           pdf = await loadingTask.promise;
         } else {
           throw firstErr;
