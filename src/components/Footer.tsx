@@ -49,8 +49,8 @@ export default function Footer() {
 
       </div>
 
-      <div className="mt-8 text-center text-gray-500 text-xs">
-        Designed and built with ❤️ by ToolQS
+      <div className="mt-8 text-center text-white text-xs">
+        Designed and built by <a href="https://www.linkedin.com/in/muhammad-ahmad-849b2a2a8/?isSelfProfile=false" className="hover:text-gray-300 transition">Ahmad</a>
       </div>
     </footer>
   );
