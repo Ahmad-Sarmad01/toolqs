@@ -29,7 +29,7 @@
     "lucide-react": "^0.542.0",
     "mammoth": "^1.10.0",
     "mongodb": "^6.19.0",
-    "next": "15.5.2",
+    "next": "15.5.9",
     "next-seo": "^6.8.0",
     "next-sitemap": "^4.2.3",
     "nodemailer": "^7.0.6",
